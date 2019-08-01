@@ -1,6 +1,5 @@
 def roll_call_dwarves(array_of_dwarves)
 hash = {}
-#index = 1
 array_of_dwarves.each_with_index{|element,index|
 hash[index] = element
 puts "#{index + 1}. #{hash[index]}"
@@ -33,8 +32,7 @@ end
 def find_the_cheese(array_of_strings)
     # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
-  array_of_strings.find do |type|
-  cheese_types.include?(type)
-  end 
+  array_of_strings.find {|type| cheese_types.include?(type)}
+  
 end
 
